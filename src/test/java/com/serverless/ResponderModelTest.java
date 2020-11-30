@@ -35,4 +35,22 @@ public class ResponderModelTest {
         //Assert
         assertThat(response).isEqualTo("12");
     }
+    @Test
+    public void cuandoPreguntanValoresMayores(){
+        //Arrange
+        String question="1234: which of the following numbers is both a square and a cube: 100, 939, 1849, 100";
+        //Act
+        String response=responderModel.answer(question);
+        //Assert
+        assertThat(response).isEqualTo("1849");
+    }
+    @Test
+    public void cuandoPreguntanValoresMayores2(){
+        //Arrange
+        String question="1234: which of the following numbers is the largest: 66, 792, 402, 43";
+        //Act
+        String response=responderModel.answer(question);
+        //Assert
+        assertThat(response).isEqualTo("792");
+    }
 }
