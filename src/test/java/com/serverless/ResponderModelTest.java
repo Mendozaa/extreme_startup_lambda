@@ -26,4 +26,13 @@ public class ResponderModelTest {
         //Assert
             assertThat(response).isEqualTo("15");
     }
+    @Test
+    public void cuandoPreguntanSumar6y6yretorna12(){
+        //Arrange
+        String question="1234: what is 6 plus 6";
+        //Act
+        String response=responderModel.answer(question);
+        //Assert
+        assertThat(response).isEqualTo("12");
+    }
 }
