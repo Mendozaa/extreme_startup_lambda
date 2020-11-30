@@ -108,6 +108,12 @@ public class ResponderModel {
                                 }
                             }
                     }
+                        else{
+                            Matcher sumMatcher4 = Pattern.compile(".*what is (\\d+) multiplied by (\\d+)").matcher(question);
+                            if (sumMatcher4.matches()) {
+                                return String.valueOf(Integer.parseInt(sumMatcher4.group(1)) * Integer.parseInt(sumMatcher4.group(2)));
+                            }
+                        }
                 }
             }
 

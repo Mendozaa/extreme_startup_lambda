@@ -53,4 +53,13 @@ public class ResponderModelTest {
         //Assert
         assertThat(response).isEqualTo("792");
     }
+    @Test
+    public void cuandoMultiplica(){
+        //Arrange
+        String question="1234: what is 11 multiplied by 11";
+        //Act
+        String response=responderModel.answer(question);
+        //Assert
+        assertThat(response).isEqualTo("121");
+    }
 }
